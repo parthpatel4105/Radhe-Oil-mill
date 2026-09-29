@@ -136,12 +136,29 @@ a {
     color: var(--primary-color);
 }
 
+.nav-tagline {
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted-color);
+    padding: 0 24px;
+}
+
+.nav-tagline-price {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    margin-top: 2px;
+}
+
 .nav-menu {
     list-style: none;
     display: flex;
     gap: 28px;
     margin: 0;
     padding: 0;
+    flex-shrink: 0;
 }
 
 .nav-link {
@@ -625,6 +642,12 @@ a {
 
     .footer-container {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-tagline {
+        display: none;
     }
 }
 
