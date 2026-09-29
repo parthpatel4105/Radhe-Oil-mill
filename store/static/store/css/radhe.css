@@ -81,11 +81,54 @@ a {
 }
 
 .nav-logo {
-    font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.nav-logo-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+}
+
+.nav-logo-icon .fa-leaf {
+    color: var(--primary-color);
     font-size: 1.5rem;
+    transform: rotate(-10deg);
+}
+
+.nav-logo-icon .fa-droplet {
+    position: absolute;
+    top: -6px;
+    right: -4px;
+    color: var(--accent-color);
+    font-size: 0.7rem;
+}
+
+.nav-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.nav-logo-line1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--primary-dark);
-    text-decoration: none;
+}
+
+.nav-logo-line2 {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--primary-color);
 }
 
 .nav-menu {
@@ -102,7 +145,8 @@ a {
     font-weight: 500;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--primary-color);
 }
 
@@ -130,7 +174,9 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color) 60%, var(--primary-light));
+    background-image: url('../img/hero-peanuts.jpg');
+    background-size: cover;
+    background-position: center;
     color: #fff;
     padding: 80px 20px;
 }
@@ -138,7 +184,7 @@ a {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(15, 40, 27, 0.25);
+    background: linear-gradient(135deg, rgba(27, 67, 50, 0.88), rgba(47, 111, 78, 0.75) 60%, rgba(27, 67, 50, 0.85));
 }
 
 .hero-content {
@@ -174,7 +220,21 @@ a {
 
 .section-title {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
 }
 
 .section-subtitle {
@@ -187,11 +247,11 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
+    margin-top: 24px;
 }
 
 .feature-box {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
+    background: var(--primary-dark);
     border-radius: 10px;
     padding: 32px 24px;
     text-align: center;
@@ -205,18 +265,19 @@ a {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(47, 111, 78, 0.12);
-    color: var(--primary-color);
+    background: rgba(116, 198, 157, 0.18);
+    color: var(--accent-color);
     font-size: 1.5rem;
 }
 
 .feature-box h3 {
     font-size: 1.15rem;
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .feature-box p {
-    color: var(--muted-color);
+    color: rgba(255, 255, 255, 0.75);
     font-size: 0.95rem;
 }
 
