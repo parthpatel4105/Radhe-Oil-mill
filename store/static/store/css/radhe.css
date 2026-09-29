@@ -641,13 +641,66 @@ a {
         display: flex;
     }
 
+    .hero-section {
+        min-height: 56vh;
+        padding: 56px 20px;
+    }
+
     .hero-content h1 {
         font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .features-section,
+    .video-section,
+    .products-section,
+    .testimonials-section,
+    .map-section {
+        padding: 44px 0;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .feature-box,
+    .product-card {
+        padding: 24px 18px;
+    }
+
+    .product-image-container {
+        width: 96px;
+        height: 96px;
+    }
+
+    .product-image-container i {
+        font-size: 2.25rem;
+    }
+
+    .carousel {
+        gap: 8px;
+    }
+
+    .review-card {
+        padding: 20px;
     }
 
     .footer-bottom {
         flex-direction: column;
         gap: 10px;
         text-align: center;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .nav-logo-line1 {
+        font-size: 1.1rem;
     }
 }
