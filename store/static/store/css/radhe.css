@@ -73,6 +73,11 @@ a {
     z-index: 100;
 }
 
+.header .container {
+    max-width: none;
+    padding: 0 30px;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -367,6 +372,14 @@ a {
     font-weight: 600;
     color: var(--primary-color);
     margin-bottom: 8px;
+}
+
+.product-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin: 0 0 10px;
 }
 
 .product-details {
