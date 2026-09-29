@@ -22,12 +22,15 @@ document.addEventListener('DOMContentLoaded', function () {
         var slides = track.children.length;
         var goTo = function (i) {
             index = (i + slides) % slides;
-            track.style.transform = 'translateX(-' + (index * 100) + '%)';
+            var target = track.children[index];
+            var offset = target.offsetLeft - track.children[0].offsetLeft;
+            track.style.transform = 'translateX(-' + offset + 'px)';
         };
         track.style.display = 'flex';
         track.style.transition = 'transform 0.4s ease-in-out';
         prevBtn.addEventListener('click', function () { goTo(index - 1); });
         nextBtn.addEventListener('click', function () { goTo(index + 1); });
+        window.addEventListener('resize', function () { goTo(index); });
     }
 
     // Order modal
