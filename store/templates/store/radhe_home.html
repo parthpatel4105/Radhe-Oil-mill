@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radhe Mini Oil | Pure Groundnut Oil in Jamnagar</title>
+    <meta name="description" content="Radhe Mini Oil — 100% pure groundnut oil made using traditional steam heating methods. Free home delivery in Jamnagar, Kalavad & nearby areas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'store/css/radhe.css' %}">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a class="nav-logo" href="{% url 'radhe_home' %}">Radhe Mini Oil</a>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#products">Product</a></li>
+                <li class="nav-item"><a class="nav-link" href="#process">Our Process</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero-section" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Pure &amp; Healthy Groundnut Oil</h1>
+            <p>Radhe Mini Oil produces 100% pure groundnut oil using traditional steam heating methods. Chemical-free oil with free home delivery in Jamnagar, Rajkot, Surat, and nearby areas.</p>
+            <a class="btn hero-btn" href="#products">&#10132; Order Pure Groundnut Oil</a>
+        </div>
+    </section>
+
+    <section class="features-section" id="process">
+        <div class="container">
+            <h2 class="section-title">Why Choose Radhe Mini Oil for Pure Groundnut Oil</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>Traditional Steam Heating Method</h3>
+                    <p>We extract groundnut oil using a traditional steam heating process that preserves natural nutrients, aroma, and authentic taste without chemicals.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="icon"><i class="fa-solid fa-check-circle"></i></div>
+                    <h3>100% Pure &amp; Chemical-Free Oil</h3>
+                    <p>Our pure groundnut oil is completely free from chemicals and preservatives, making it safe and healthy for everyday cooking.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>Trusted by 50,000+ Families in Gujarat</h3>
+                    <p>Families across Jamnagar, Rajkot, Kalavad, Surat and nearby areas trust Radhe Mini Oil for consistent quality, purity, and honest practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section text-center" id="about">
+        <div class="container">
+            <h2>Traditional Groundnut Oil by Radhe Mini Oil</h2>
+            <p>At Radhe Mini Oil in Jamnagar, we preserve the original taste of groundnut oil using a traditional steam-heating process. Our oil is 100% pure, chemical-free, and prepared without any artificial additives, making it ideal for healthy everyday cooking.</p>
+        </div>
+    </section>
+
+    <section class="products-section text-center" id="products">
+        <div class="container">
+            <h2>Our Pure Groundnut Oil Products</h2>
+            <p class="section-subtitle">Radhe Mini Oil offers 100% pure groundnut oil in multiple pack sizes with free home delivery in Jamnagar, Kalavad, and nearby areas.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image-container"><i class="fa-solid fa-bottle-droplet"></i></div>
+                    <h3>1 Liter Groundnut Oil Bottle</h3>
+                    <p class="product-tagline">Ideal for small families and daily cooking</p>
+                    <p class="product-details">Pure groundnut oil in 1 liter bottle, traditionally steam heated, chemical-free and perfect for everyday use.</p>
+                    <button type="button" class="btn product-btn" data-product="1 Liter Groundnut Oil Bottle">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><i class="fa-solid fa-jug-detergent"></i></div>
+                    <h3>5 Liter Groundnut Oil Can</h3>
+                    <p class="product-tagline">Best seller for homes in Gujarat</p>
+                    <p class="product-details">Pure groundnut oil suitable for monthly cooking needs with rich taste, aroma, and nutrition.</p>
+                    <button type="button" class="btn product-btn" data-product="5 Liter Groundnut Oil Can">Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container"><i class="fa-solid fa-oil-can"></i></div>
+                    <h3>15 Kg Groundnut Oil Tin (Bulk Pack)</h3>
+                    <p class="product-tagline">Ideal for restaurants, shops &amp; bulk buyers</p>
+                    <p class="product-details">Economical 15 kg pack of traditional steam-heated groundnut oil trusted by hotels and businesses.</p>
+                    <button type="button" class="btn product-btn" data-product="15 Kg Groundnut Oil Tin (Bulk Pack)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section text-center" id="reviews">
+        <div class="container">
+            <h2>Customer Reviews of Radhe Mini Oil</h2>
+            <p class="section-subtitle">Trusted by families across Jamnagar, Kalavad, and Gujarat for pure, chemical-free groundnut oil made using traditional methods.</p>
+            <div class="carousel">
+                <button class="nav-btn prev" aria-label="Previous review">&#8249;</button>
+                <div class="track" id="reviewTrack">
+                    <div class="review-card">
+                        <p>&ldquo;The oil tastes exactly like the one my grandmother used to make. Genuinely chemical-free.&rdquo;</p>
+                        <span>&mdash; Kajal M., Jamnagar</span>
+                    </div>
+                    <div class="review-card">
+                        <p>&ldquo;We buy the 15kg tin for our restaurant every month. Consistent quality every time.&rdquo;</p>
+                        <span>&mdash; Vipul R., Kalavad</span>
+                    </div>
+                    <div class="review-card">
+                        <p>&ldquo;Free home delivery and honest pricing. Switched our whole family to Radhe Mini Oil.&rdquo;</p>
+                        <span>&mdash; Foram S., Rajkot</span>
+                    </div>
+                </div>
+                <button class="nav-btn next" aria-label="Next review">&#8250;</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section text-center">
+        <div class="container">
+            <h2>Visit Radhe Mini Oil in Jamnagar</h2>
+            <p>Radhe Mini Oil is located in Mota Vadala, Kalavad, Jamnagar, Gujarat. Visit our traditional oil mill to experience 100% pure and chemical-free groundnut oil made using time-tested methods.</p>
+            <div class="map-placeholder">
+                <iframe src="https://www.google.com/maps?q=Mota+Vadala,+Kalavad,+Jamnagar,+Gujarat&output=embed"
+                        width="100%" height="450" style="border:0" allowfullscreen loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Radhe Mini Oil location in Mota Vadala, Kalavad, Jamnagar"></iframe>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer" id="contact">
+    <div class="container footer-container">
+        <div class="footer-col">
+            <a class="footer-logo" href="{% url 'radhe_home' %}">Radhe Mini Oil</a>
+            <p>Radhe Mini Oil produces 100% pure and natural groundnut oil using traditional methods. Trusted by families across Jamnagar and Gujarat.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="nav-footer">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Product</a></li>
+                <li><a href="#process">Our Process</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Address</h4>
+            <p>Radhe Mini Oil<br>Mota Vadala, Kalavad,<br>Jamnagar, Gujarat</p>
+            <h4>Contact</h4>
+            <p>
+                &#128222; <a href="tel:+919879416780">98794 16780</a><br>
+                &#9200; 11:00 AM &ndash; 5:00 PM<br>
+                &#9993; <a href="mailto:umaparth7@gmail.com">umaparth7@gmail.com</a>
+            </p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Radhe Mini Oil | All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="https://wa.me/919879416780" aria-label="WhatsApp Radhe Mini Oil" target="_blank" rel="noreferrer"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:umaparth7@gmail.com" aria-label="Email Radhe Mini Oil"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
+</footer>
+
+<div class="modal-overlay" id="orderModal">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+        <div class="modal-header">
+            <h3 id="orderModalTitle">Order <span id="modalProductName">Product</span></h3>
+            <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p>Call or WhatsApp us to place your order, or drop us an email — we'll confirm price and delivery for your area.</p>
+        </div>
+        <div class="modal-actions">
+            <a class="btn modal-btn" href="tel:+919879416780"><i class="fa-solid fa-phone"></i> Call 98794 16780</a>
+            <a class="btn modal-btn" href="https://wa.me/919879416780" target="_blank" rel="noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a class="btn modal-btn" href="mailto:umaparth7@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'store/js/radhe.js' %}"></script>
+</body>
+</html>
