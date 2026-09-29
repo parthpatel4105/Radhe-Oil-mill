@@ -1,3 +1,16 @@
 from django.db import models
 
-# No database-backed models are needed for the Radhe Mini Oil landing page.
+
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=150)
+    email = models.EmailField()
+    contact_number = models.CharField(max_length=20)
+    subject = models.CharField(max_length=200)
+    reason = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f'{self.name} - {self.subject}'

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Radhe Mini Oil</title>
+    <meta name="description" content="Get in touch with Radhe Mini Oil — questions about our pure groundnut oil, orders, or bulk pricing.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    {% load static %}
+    <link rel="icon" href="{% static 'store/img/favicon.ico' %}" sizes="any">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'store/img/favicon-16.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'store/img/favicon-32.png' %}">
+    <link rel="icon" type="image/png" sizes="48x48" href="{% static 'store/img/favicon-48.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'store/img/apple-touch-icon.png' %}">
+    <link rel="stylesheet" href="{% static 'store/css/radhe.css' %}">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a class="nav-logo" href="{% url 'radhe_home' %}">
+                <span class="nav-logo-icon"><i class="fa-solid fa-leaf"></i><i class="fa-solid fa-droplet"></i></span>
+                <span class="nav-logo-text"><span class="nav-logo-line1">Radhe</span><span class="nav-logo-line2">Mini Oil</span></span>
+            </a>
+            <div class="nav-tagline">
+                100% Pure &amp; Chemical-Free
+                <span class="nav-tagline-price">15 Kg Tin &#8377;3,500</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a class="nav-link" href="{% url 'radhe_home' %}#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'radhe_home' %}#products">Product</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'radhe_home' %}#process">Our Process</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'radhe_home' %}#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'radhe_home' %}#reviews">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="contact-section text-center">
+        <div class="container">
+            <h2 class="section-title contact-title"><i class="fa-solid fa-location-dot"></i> Get in Touch With Us</h2>
+            <p class="section-subtitle">We'd love to hear from you! Whether you have a question about our products, delivery, or bulk pricing, our team is ready to help.</p>
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="form-alert form-alert-{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+
+            <form method="post" class="contact-form">
+                {% csrf_token %}
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="{{ form.name.id_for_label }}">Name</label>
+                        {{ form.name }}
+                        {{ form.name.errors }}
+                    </div>
+                    <div class="form-field">
+                        <label for="{{ form.email.id_for_label }}">Email</label>
+                        {{ form.email }}
+                        {{ form.email.errors }}
+                    </div>
+                    <div class="form-field">
+                        <label for="{{ form.contact_number.id_for_label }}">Contact Number</label>
+                        {{ form.contact_number }}
+                        {{ form.contact_number.errors }}
+                    </div>
+                    <div class="form-field">
+                        <label for="{{ form.subject.id_for_label }}">Subject</label>
+                        {{ form.subject }}
+                        {{ form.subject.errors }}
+                    </div>
+                </div>
+                <div class="form-field form-field-full">
+                    <label for="{{ form.reason.id_for_label }}">Reason (Optional)</label>
+                    {{ form.reason }}
+                    {{ form.reason.errors }}
+                </div>
+                <button type="submit" class="btn contact-submit">Submit</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-col">
+            <a class="footer-logo" href="{% url 'radhe_home' %}">Radhe Mini Oil</a>
+            <p>Radhe Mini Oil produces 100% pure and natural groundnut oil using traditional methods. Trusted by families across Jamnagar and Gujarat.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="nav-footer">
+                <li><a href="{% url 'radhe_home' %}#home">Home</a></li>
+                <li><a href="{% url 'radhe_home' %}#products">Product</a></li>
+                <li><a href="{% url 'radhe_home' %}#process">Our Process</a></li>
+                <li><a href="{% url 'radhe_home' %}#about">About</a></li>
+                <li><a href="{% url 'radhe_home' %}#reviews">Reviews</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Address</h4>
+            <p>Radhe Mini Oil<br>Mota Vadala, Kalavad,<br>Jamnagar, Gujarat</p>
+            <h4>Contact</h4>
+            <p>
+                &#128222; <a href="tel:+919879416780">98794 16780</a><br>
+                &#9200; 11:00 AM &ndash; 5:00 PM<br>
+                &#9993; <a href="mailto:umaparth7@gmail.com">umaparth7@gmail.com</a>
+            </p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Radhe Mini Oil | All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="https://wa.me/919879416780" aria-label="WhatsApp Radhe Mini Oil" target="_blank" rel="noreferrer"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:umaparth7@gmail.com" aria-label="Email Radhe Mini Oil"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="{% static 'store/js/radhe.js' %}"></script>
+</body>
+</html>
