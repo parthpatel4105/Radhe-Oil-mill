@@ -8,6 +8,10 @@ def radhe_home(request):
     return render(request, 'store/radhe_home.html')
 
 
+def about(request):
+    return render(request, 'store/about.html')
+
+
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)

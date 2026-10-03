@@ -470,6 +470,83 @@ a {
     background: var(--primary-dark);
 }
 
+/* About page */
+.about-hero {
+    padding: 70px 0 20px;
+}
+
+.about-title {
+    font-size: 2.5rem;
+}
+
+.about-section {
+    padding: 30px 0 70px;
+}
+
+.about-subheading {
+    color: var(--primary-color);
+    font-size: 1.9rem;
+    margin: 40px 0 16px;
+}
+
+.about-subheading:first-child {
+    margin-top: 0;
+}
+
+.about-text {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--text-color);
+    font-size: 1.05rem;
+}
+
+.team-section {
+    padding: 0 0 80px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 48px;
+    margin-top: 32px;
+    text-align: center;
+}
+
+.team-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: rgba(47, 111, 78, 0.1);
+    border: 3px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-avatar i {
+    font-size: 2.75rem;
+    color: var(--primary-color);
+}
+
+.team-member h3 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.team-role {
+    color: var(--muted-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.team-bio {
+    max-width: 320px;
+    margin: 0 auto;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
 /* Contact page */
 .contact-section {
     padding: 70px 0 90px;
@@ -720,7 +797,8 @@ a {
 @media (max-width: 860px) {
     .features-grid,
     .product-grid,
-    .form-grid {
+    .form-grid,
+    .team-grid {
         grid-template-columns: 1fr;
     }
 

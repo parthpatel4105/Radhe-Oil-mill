@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Radhe Mini Oil</title>
-    <meta name="description" content="Get in touch with Radhe Mini Oil — questions about our pure groundnut oil, orders, or bulk pricing.">
+    <title>About Us | Radhe Mini Oil</title>
+    <meta name="description" content="About Radhe Mini Oil — a family-owned traditional groundnut oil mill in Mota Vadala, Kalavad, Jamnagar.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -33,9 +33,9 @@
                 <li class="nav-item"><a class="nav-link" href="{% url 'radhe_home' %}#home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'radhe_home' %}#products">Product</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'radhe_home' %}#process">Our Process</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{% url 'about' %}">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'radhe_home' %}#reviews">Reviews</a></li>
-                <li class="nav-item"><a class="nav-link active" href="{% url 'contact' %}">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
                 <span class="bar"></span><span class="bar"></span><span class="bar"></span>
@@ -45,48 +45,52 @@
 </header>
 
 <main>
-    <section class="contact-section text-center">
+    <section class="about-hero text-center">
         <div class="container">
-            <h2 class="section-title contact-title"><i class="fa-solid fa-location-dot"></i> Get in Touch With Us</h2>
-            <p class="section-subtitle">We'd love to hear from you! Whether you have a question about our products, delivery, or bulk pricing, our team is ready to help.</p>
+            <h1 class="about-title">About Radhe Mini Oil</h1>
+            <p class="section-subtitle">We are a family-owned business rooted in the traditions of Gujarat, dedicated to providing pure and natural groundnut oil to families in Jamnagar, Kalavad, and nearby areas.</p>
+        </div>
+    </section>
 
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="form-alert form-alert-{{ message.tags }}">{{ message }}</div>
-                {% endfor %}
-            {% endif %}
+    <section class="about-section text-center">
+        <div class="container">
+            <h2 class="about-subheading">Our Story</h2>
+            <p class="about-text">Radhe Mini Oil was born from a simple idea: to bring back the authentic taste and health benefits of traditionally made groundnut oil. Based in Mota Vadala, Kalavad (Jamnagar), we follow time-tested oil extraction methods without chemicals.</p>
 
-            <form method="post" class="contact-form">
-                {% csrf_token %}
-                <div class="form-grid">
-                    <div class="form-field">
-                        <label for="{{ form.name.id_for_label }}">Name</label>
-                        {{ form.name }}
-                        {{ form.name.errors }}
-                    </div>
-                    <div class="form-field">
-                        <label for="{{ form.email.id_for_label }}">Email</label>
-                        {{ form.email }}
-                        {{ form.email.errors }}
-                    </div>
-                    <div class="form-field">
-                        <label for="{{ form.contact_number.id_for_label }}">Contact Number</label>
-                        {{ form.contact_number }}
-                        {{ form.contact_number.errors }}
-                    </div>
-                    <div class="form-field">
-                        <label for="{{ form.subject.id_for_label }}">Subject</label>
-                        {{ form.subject }}
-                        {{ form.subject.errors }}
-                    </div>
+            <h2 class="about-subheading">Our Mission</h2>
+            <p class="about-text">Our mission is to deliver 100% pure and healthy groundnut oil to every household. We support local farmers in Gujarat and preserve traditional oil-making techniques for quality and trust.</p>
+        </div>
+    </section>
+
+    <section class="team-section text-center">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-avatar"><i class="fa-solid fa-user"></i></div>
+                    <h3>Name Coming Soon</h3>
+                    <p class="team-role">Founder</p>
+                    <p class="team-bio">With decades of experience in traditional oil milling, ensuring every bottle meets high purity standards.</p>
                 </div>
-                <div class="form-field form-field-full">
-                    <label for="{{ form.reason.id_for_label }}">Reason (Optional)</label>
-                    {{ form.reason }}
-                    {{ form.reason.errors }}
+                <div class="team-member">
+                    <div class="team-avatar"><i class="fa-solid fa-user"></i></div>
+                    <h3>Name Coming Soon</h3>
+                    <p class="team-role">Co-Founder</p>
+                    <p class="team-bio">Manages sourcing from local farmers, ensuring only premium quality groundnuts are used.</p>
                 </div>
-                <button type="submit" class="btn contact-submit">Submit</button>
-            </form>
+                <div class="team-member">
+                    <div class="team-avatar"><i class="fa-solid fa-user"></i></div>
+                    <h3>Name Coming Soon</h3>
+                    <p class="team-role">Operations Manager</p>
+                    <p class="team-bio">Oversees daily milling operations and makes sure every order is packed and delivered on time.</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar"><i class="fa-solid fa-user"></i></div>
+                    <h3>Name Coming Soon</h3>
+                    <p class="team-role">Quality Lead</p>
+                    <p class="team-bio">Checks every batch for purity and consistency before it leaves the mill for delivery.</p>
+                </div>
+            </div>
         </div>
     </section>
 </main>
